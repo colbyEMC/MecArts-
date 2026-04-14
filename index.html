@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MecArts Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 26px;
+      color: #00f5d4;        /* Teal */
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00f5d4;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #bbb;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #00f5d4;
+      color: #000;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #00e6c8;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 50px;
+      color: #00f5d4;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card p {
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+      color: #ddd;
+      background: #111;
+    }
+
+    /* Before & After Side-by-Side */
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .about-text {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 17.5px;
+    }
+
+    .contact-info {
+      text-align: center;
+      color: #bbb;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #111;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 768px) {
+      .before-after {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MecArts</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Hi, I'm MecArts</h2>
+    <p>I create stunning digital edits &amp; visual transformations</p>
+    <a href="#work" class="btn">View My Work</a>
+  </section>
+
+  <section id="work">
+    <h2 class="section-title">My Work</h2>
+    
+    <div class="gallery">
+
+      <!-- First Project: Mountain Lake -->
+      <div class="before-after">
+        <div class="card">
+          <img src="before.png" alt="Before Edit" />
+          <p>Before</p>
+        </div>
+        <div class="card">
+          <img src="after.png" alt="After Edit" />
+          <p>After</p>
+        </div>
+      </div>
+
+      <!-- Second Project: Lighthouse -->
+      <div class="before-after">
+        <div class="card">
+          <img src="before1.png" alt="Before Edit" />
+          <p>Before</p>
+        </div>
+        <div class="card">
+          <img src="after1.png" alt="After Edit" />
+          <p>After</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+      Welcome to MecArts. I'm a passionate digital artist specializing in photo manipulation, 
+      creative edits, and cinematic visual storytelling. I love transforming ordinary images into 
+      breathtaking pieces of art.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="contact-info">
+      Email: colby.emc@gmail.com<br>
+      Phone: 0788312821
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 MecArts. All rights reserved.</p>
+  </footer>
+</body>
+</html>
